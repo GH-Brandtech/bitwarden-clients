@@ -245,9 +245,10 @@ export class ItemDetailsSectionComponent implements OnInit {
   }
 
   get defaultOwner() {
-    // Default to personal ownership if permitted or if there are no other alternatives
-    // (in which case the top level component will show an error toast on submit)
-    if (this.allowPersonalOwnership || this.organizations.length === 0) {
+    // New items default to the first organization. Personal ownership is only used when the user
+    // has no organizations (in which case the top level component shows an error toast on submit
+    // if personal ownership is not permitted).
+    if (this.organizations.length === 0) {
       return null;
     }
     return this.organizations[0].id;
