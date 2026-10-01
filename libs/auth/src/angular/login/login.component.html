@@ -11,7 +11,7 @@
         appAutofocus
         data-testid="login-email-input"
         (input)="onEmailInput($event)"
-        (keyup.enter)="ssoRequired ? handleSsoClick() : continuePressed()"
+        (keyup.enter)="handleSsoClick()"
       />
     </bit-form-field>
 
@@ -22,54 +22,19 @@
         formControlName="rememberEmail"
         data-testid="login-remember-email"
         (input)="onRememberEmailInput($event)"
-        (keyup.enter)="ssoRequired ? handleSsoClick() : continuePressed()"
+        (keyup.enter)="handleSsoClick()"
         bitCheckbox
       />
       <bit-label>{{ "rememberEmail" | i18n }}</bit-label>
     </bit-form-control>
 
     <div class="tw-grid tw-gap-3">
-      <!-- Continue button -->
-      <button
-        type="button"
-        bitButton
-        block
-        buttonType="primary"
-        data-testid="login-continue-button"
-        (click)="continuePressed()"
-        [bitTooltip]="ssoRequired ? ('yourOrganizationRequiresSingleSignOn' | i18n) : ''"
-        [addTooltipToDescribedby]="ssoRequired"
-        [disabled]="ssoRequired"
-      >
-        {{ "continue" | i18n }}
-      </button>
-
-      <div class="tw-text-center">{{ "or" | i18n }}</div>
-
-      <!-- Button to Login with Passkey -->
-      <ng-container *ngIf="isLoginWithPasskeySupported()">
-        <button
-          type="button"
-          bitButton
-          block
-          buttonType="secondary"
-          data-testid="login-with-passkey-button"
-          (click)="handleLoginWithPasskeyClick()"
-          [bitTooltip]="ssoRequired ? ('yourOrganizationRequiresSingleSignOn' | i18n) : ''"
-          [addTooltipToDescribedby]="ssoRequired"
-          [disabled]="ssoRequired"
-        >
-          <bit-icon name="bwi-passkey" class="tw-mr-1"></bit-icon>
-          {{ "logInWithPasskey" | i18n }}
-        </button>
-      </ng-container>
-
       <!-- Button to Login with SSO -->
       <button
         type="button"
         bitButton
         block
-        [buttonType]="ssoRequired ? 'primary' : 'secondary'"
+        buttonType="primary"
         data-testid="login-sso-button"
         (click)="handleSsoClick()"
       >

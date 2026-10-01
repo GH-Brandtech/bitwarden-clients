@@ -6,7 +6,7 @@
     "message": "Bitwarden logo"
   },
   "extName": {
-    "message": "GH Vaultwarden Password Manager",
+    "message": "GH Password Manager",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extNameBeta": {
@@ -1963,7 +1963,7 @@
     "message": "Enter a code sent to your email."
   },
   "selfHostedEnvironment": {
-    "message": "Self-hosted environment"
+    "message": "GH Brandtech Server"
   },
   "selfHostedBaseUrlHint": {
     "message": "Specify the base URL of your on-premises hosted Bitwarden installation. Example: https://bitwarden.company.com"
@@ -4361,7 +4361,7 @@
     "message": "Server version"
   },
   "selfHostedServer": {
-    "message": "self-hosted"
+    "message": "GH Server"
   },
   "thirdParty": {
     "message": "Third-party"

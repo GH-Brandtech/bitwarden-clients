@@ -6,7 +6,7 @@
     "message": "Logo do Bitwarden"
   },
   "extName": {
-    "message": "Bitwarden Gerenciador de Senhas",
+    "message": "GH Gerenciador de Senhas",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extNameBeta": {
@@ -1966,7 +1966,7 @@
     "message": "Digite o código enviado para seu e-mail."
   },
   "selfHostedEnvironment": {
-    "message": "Ambiente auto-hospedado"
+    "message": "Ambiente GH Brandtech"
   },
   "selfHostedBaseUrlHint": {
     "message": "Especifique a URL base da sua instalação local do Bitwarden. Exemplo: https://bitwarden.company.com"
@@ -4364,7 +4364,7 @@
     "message": "Versão do servidor"
   },
   "selfHostedServer": {
-    "message": "auto-hospedado"
+    "message": "Servidor GH"
   },
   "thirdParty": {
     "message": "Terceiros"
