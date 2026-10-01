@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name" xml:space="preserve">
-    <value>Bitwarden Password Manager</value>
+    <value>GH Vaultwarden Password Manager</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>A casa, al lavoro, o in viaggio, Bitwarden protegge facilmente tutte le tue password, passkey, e informazioni sensibili.</value>

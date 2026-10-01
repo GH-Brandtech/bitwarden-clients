@@ -10,7 +10,19 @@
 
 ---
 
-# Bitwarden Client Applications
+# FORKED - Bitwarden Client Applications
+
+[Original repo](https://github.com/bitwarden/clients.git)
+
+## Pull updates from original repo
+
+```bash
+git remote add upstream https://github.com/bitwarden/clients.git
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
 
 This repository houses all Bitwarden client applications except the mobile applications ([iOS](https://github.com/bitwarden/ios) | [android](https://github.com/bitwarden/android)).
 

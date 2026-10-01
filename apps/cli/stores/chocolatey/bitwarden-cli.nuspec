@@ -17,7 +17,7 @@
     <releaseNotes>https://github.com/bitwarden/clients/releases</releaseNotes>
     <licenseUrl>https://github.com/bitwarden/clients/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bitwarden password manager cli</tags>
+    <tags>GH Vaultwarden Password Manager cli</tags>
     <summary>A secure and free password manager for all of your devices.</summary>
     <description>
       For CLI documentation, please visit https://help.bitwarden.com/article/cli/

@@ -1,7 +1,7 @@
 # Vendors
 
 This folder contains vendor-specific logic that extends the
-Bitwarden password manager.
+GH Vaultwarden Password Manager.
 
 ## Vendor IDs
 

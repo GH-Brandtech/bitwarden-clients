@@ -1,7 +1,7 @@
 [![Github Workflow build browser on main](https://github.com/bitwarden/clients/actions/workflows/build-browser.yml/badge.svg?branch=main)](https://github.com/bitwarden/clients/actions/workflows/build-browser.yml?query=branch:main)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/bitwarden-browser/localized.svg)](https://crowdin.com/project/bitwarden-browser)
 
-# Bitwarden Browser Extension
+# GH Vaultwarden Browser Extension
 
 <a href="https://chromewebstore.google.com/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb" target="_blank"><img src="https://imgur.com/3C4iKO0.png" width="64" height="64"></a>
 <a href="https://addons.mozilla.org/firefox/addon/bitwarden-password-manager/" target="_blank"><img src="https://imgur.com/ihXsdDO.png" width="64" height="64"></a>

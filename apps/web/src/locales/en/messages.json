@@ -14356,10 +14356,10 @@
     "message": "Continue setting up your free trial of Bitwarden"
   },
   "continueSettingUpPasswordManager": {
-    "message": "Continue setting up Bitwarden Password Manager"
+    "message": "Continue setting up GH Vaultwarden Password Manager"
   },
   "continueSettingUpFreeTrialPasswordManager": {
-    "message": "Continue setting up your free trial of Bitwarden Password Manager"
+    "message": "Continue setting up your free trial of GH Vaultwarden Password Manager"
   },
   "continueSettingUpSecretsManager": {
     "message": "Continue setting up Bitwarden Secrets Manager"
@@ -14943,7 +14943,7 @@
     "message": "Your Secrets Manager subscription will upgrade based on the plan selected"
   },
   "bitwardenPasswordManager": {
-    "message": "Bitwarden Password Manager"
+    "message": "GH Vaultwarden Password Manager"
   },
   "secretsManagerComplimentaryPasswordManager": {
     "message": "Your complimentary one year Password Manager subscription will upgrade to the selected plan. You will not be charged until the complimentary period is over."
