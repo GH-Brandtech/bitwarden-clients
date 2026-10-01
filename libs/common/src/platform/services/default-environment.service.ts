@@ -141,6 +141,11 @@ const DEFAULT_REGION = Region.US;
  */
 const DEFAULT_REGION_CONFIG = PRODUCTION_REGIONS.find((r) => r.key === DEFAULT_REGION);
 
+/**
+ * This build only connects to a single self-hosted server. Cloud regions are not selectable.
+ */
+const FIXED_SERVER_URL = "https://vault.ghbrandtech.com";
+
 export class DefaultEnvironmentService implements EnvironmentService {
   private globalState: GlobalState<EnvironmentState | null>;
   private globalCloudRegionState: GlobalState<CloudRegion | null>;
@@ -220,7 +225,7 @@ export class DefaultEnvironmentService implements EnvironmentService {
   }
 
   availableRegions(): RegionConfig[] {
-    return PRODUCTION_REGIONS.concat(this.additionalRegionConfigs);
+    return [];
   }
 
   /**
@@ -283,26 +288,9 @@ export class DefaultEnvironmentService implements EnvironmentService {
   /**
    * Helper for building the environment from state. Performs some general sanitization to avoid invalid regions and urls.
    */
-  protected buildEnvironment(region: Region, urls: Urls) {
-    // Unknown regions are treated as self-hosted
-    if (this.getRegionConfig(region) == null) {
-      region = Region.SelfHosted;
-    }
-
-    // If self-hosted ensure urls are valid else fallback to default region
-    if (region == Region.SelfHosted && isEmpty(urls)) {
-      region = DEFAULT_REGION;
-    }
-
-    // Load urls from region config
-    if (region != Region.SelfHosted) {
-      const regionConfig = this.getRegionConfig(region);
-      if (regionConfig != null) {
-        return new CloudEnvironment(regionConfig);
-      }
-    }
-
-    return new SelfHostedEnvironment(urls);
+  protected buildEnvironment(_region: Region, _urls: Urls) {
+    // Stored region/urls are ignored: the only server is FIXED_SERVER_URL
+    return new SelfHostedEnvironment({ base: FIXED_SERVER_URL });
   }
 
   async setCloudRegion(userId: UserId | null, region: CloudRegion) {

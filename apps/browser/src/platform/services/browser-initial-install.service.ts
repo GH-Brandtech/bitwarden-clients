@@ -53,12 +53,12 @@ export default class BrowserInitialInstallService {
       installType === ExtensionInstallType.Development ||
       installType === ExtensionInstallType.Unknown;
 
-    if (
-      isUserInitiatedInstall &&
-      !devFlagEnabled("skipWelcomeOnInstall") &&
-      !flagEnabled("prereleaseBuild")
-    ) {
-      void BrowserApi.createNewTab(WELCOME_PAGE_URL);
-    }
+    // if (
+    //   isUserInitiatedInstall &&
+    //   !devFlagEnabled("skipWelcomeOnInstall") &&
+    //   !flagEnabled("prereleaseBuild")
+    // ) {
+    //   void BrowserApi.createNewTab(WELCOME_PAGE_URL);
+    // }
   }
 }

@@ -6,7 +6,7 @@
     "message": "Bitwarden ലോഗോ"
   },
   "extName": {
-    "message": "Bitwarden പാസ്‌വേഡ് മാനേജർ",
+    "message": "GH Vaultwarden Password Manager",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extNameBeta": {

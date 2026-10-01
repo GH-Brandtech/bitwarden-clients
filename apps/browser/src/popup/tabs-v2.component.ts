@@ -7,8 +7,8 @@ import {
   VaultActive,
   GeneratorInactive,
   GeneratorActive,
-  SendInactive,
-  SendActive,
+  // SendInactive,
+  // SendActive,
   SettingsInactive,
   SettingsActive,
 } from "@bitwarden/assets/svg";
@@ -51,7 +51,7 @@ export class TabsV2Component {
     this.sendEnabled$.pipe(startWith(true)),
     this.healthNavButton$.pipe(startWith(undefined)),
   ]).pipe(
-    map(([showBerry, sendEnabled, healthNavButton]) => {
+    map(([showBerry, _sendEnabled, healthNavButton]) => {
       const buttons: BottomNavigationButton[] = [
         {
           label: "vault",
@@ -65,16 +65,17 @@ export class TabsV2Component {
           icon: GeneratorInactive,
           iconActive: GeneratorActive,
         },
-        ...(sendEnabled
-          ? [
-              {
-                label: "send",
-                page: "/tabs/send",
-                icon: SendInactive,
-                iconActive: SendActive,
-              } as BottomNavigationButton,
-            ]
-          : []),
+        // Send is not enabled on our server, so the tab is hidden.
+        // ...(sendEnabled
+        //   ? [
+        //       {
+        //         label: "send",
+        //         page: "/tabs/send",
+        //         icon: SendInactive,
+        //         iconActive: SendActive,
+        //       } as BottomNavigationButton,
+        //     ]
+        //   : []),
         ...(healthNavButton ? [healthNavButton] : []),
         {
           label: "settings",

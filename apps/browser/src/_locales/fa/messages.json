@@ -6,7 +6,7 @@
     "message": "لوگو Bitwarden"
   },
   "extName": {
-    "message": "مدیریت کلمه عبور Bitwarden",
+    "message": "GH Vaultwarden Password Manager",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extNameBeta": {

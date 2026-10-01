@@ -43,7 +43,7 @@
     "build:bit:prod:safari": "cross-env NODE_ENV=production npm run build:bit:safari",
     "build:beta:chrome": "cross-env CHANNEL=beta npm run build:prod:chrome",
     "build:bit:beta:chrome": "cross-env CHANNEL=beta npm run build:bit:prod:chrome",
-    "dist:chrome": "npm run build:prod:chrome && mkdir -p dist && ./scripts/compress.sh dist-chrome.zip",
+    "dist:chrome": "npm run build:prod:chrome && node ./scripts/compress.js dist-chrome.zip",
     "dist:bit:chrome": "npm run build:bit:prod:chrome && mkdir -p dist && ./scripts/compress.sh bit-dist-chrome.zip",
     "dist:beta:chrome": "npm run build:beta:chrome && npm run update:beta:chrome && mkdir -p dist && ./scripts/compress.sh dist-chrome.zip",
     "dist:bit:beta:chrome": "npm run build:bit:beta:chrome && npm run update:beta:chrome && mkdir -p dist && ./scripts/compress.sh bit-dist-chrome.zip",
